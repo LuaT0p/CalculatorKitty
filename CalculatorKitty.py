@@ -19,7 +19,6 @@ janela.title("Calculadora Kitty")
 janela.geometry("320x450")
 janela.config(bg=corPreta)
 
-
 frame_tela = ctk.CTkFrame(janela, width=320, height=110, fg_color=corBranca)
 frame_tela.grid(row=0, column=0)
 
@@ -74,10 +73,8 @@ def limpar_tela():
 
 #label ---------------------------------------------------------------------
 
-
-
 app_label = Label(frame_tela, textvariable=valor_texto, width=12, height=3, padx=5, relief=FLAT, anchor="e", justify=RIGHT, font=fonte_Starborn32, fg=corPreta, bg=corBranca)
-app_label.place(x=0, y=0)
+app_label.place(x=-10, y=0)
 
 # Hello Kitty --------------------------------------------------------------
 
@@ -147,9 +144,5 @@ b_ponto.place(x=85, y= 275)
 
 b_igual = ctk.CTkButton(frame_corpo, text="=", font=fonte_Starborn16, width=150, height=50, fg_color=corRosa, text_color=corPreta, hover_color=corRosaclaro, corner_radius=5, command= calcular)
 b_igual.place(x=165, y= 275)
-
-# calcular -----------------------------------------------------------
-
-
 
 janela.mainloop()
